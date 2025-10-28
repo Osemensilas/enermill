@@ -15,6 +15,7 @@ module.exports = {
         offBlack: "var(--offBlack)",
         danger: "var(--danger)",
         grey: "grey",
+        background: "var(--background)"
       }
     },
   },

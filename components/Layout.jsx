@@ -1,8 +1,14 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Layout = ({children}) => {
+
+    const router = useRouter();
+
+    const isHomePage = router.pathname === "/";
+
     return ( 
         <>
         <Head>
@@ -12,11 +18,11 @@ const Layout = ({children}) => {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
             <link rel="shortcut icon" href="" type="image/x-icon" />
         </Head>
-        <Header/>
-        <main className="relative after:content-[''] after:absolute h-max after:h-[100%] w-screen after:w-[100%] after:top-0 after:left-0 after:bg-black after:opacity-50">
+        {!isHomePage && <Header />}
+        <main className="">
             {children}
             <div className="fixed top-[90%] left-[85%] sm:left-[95%] z-30">
-                <a href="https://wa.me/2348067691079" className="h-max w-max" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <a href="https://wa.me/2348169537714" className="h-max w-max" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                     <i className="fa fa-whatsapp text-5xl text-green-500"></i>
                 </a>
             </div>

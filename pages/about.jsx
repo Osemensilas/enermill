@@ -15,32 +15,30 @@ const About = () => {
                 transition={{ duration: 2 }}
                 >About Us</motion.h1>
                 <p className="max-w-4xl text-lg text-neutralDark mb-8">
-                    <span className="font-semibold">BODANT INNOVATIVE RESOURCE LTD</span> is a modern engineering construction services firm committed to providing excellence on every project. 
-                    We have established ourselves as a trusted partner in the industry with a strong focus on innovation, quality, and customer satisfaction.
+                    <span className="font-semibold">Enermill Power Limited</span> is a leading Nigerian company specializing in the development, construction, and operation of power generation systems. Incorporated under the Companies and Allied Matters Act (CAMA) 2020 and duly registered with the Corporate Affairs Commission (CAC), we are committed to delivering reliable, high-quality, and sustainable energy solutions across commercial, industrial, and utility sectors.
                 </p>
                 <div className="max-w-4xl text-neutralDark text-base space-y-6 text-justify">
                     <p>
-                        Our team of experienced professionals delivers a wide range of services including MEP Building Services, Renewable Energy, Extra Low Voltage Systems, Power Distribution, and Project Management. 
-                        We are capable of executing projects of all sizes for commercial, residential, and industrial clients.
+                        Built on a foundation of expertise, innovation, and integrity, Enermill Power Limited is recognized for its technical excellence, project management proficiency, and deep understanding of power system design and operations. Our cumulative 120 years of industry experience empower us to deliver projects that exceed expectations in efficiency, reliability, and long-term value.
                     </p>
                     <p>
-                        At Bodant, we value every client—whether an individual or a large organization. We are committed to delivering premium services with the same level of dedication and excellence, no matter the size or scope of the project.
+                        At Enermill, we believe in collaboration and partnership. Our team is dedicated to providing clients with tailored energy solutions that meet their unique requirements while maintaining the highest standards of safety, environmental responsibility, and regulatory compliance.
                     </p>
                     <p>
-                        Our mission is to deliver innovative, reliable, and sustainable engineering solutions that exceed client expectations and contribute positively to society. Our vision is to be the leading provider of engineering and facility management services, recognized for excellence, integrity, and commitment to quality.
+                        Driven by our passion for progress, we continue to leverage cutting-edge technologies and innovative methodologies to power industries, communities, and futures — one project at a time.
                     </p>
                 </div>
                 <div className="mt-12 flex flex-col sm:flex-row gap-8 w-full max-w-4xl">
                     <div className="flex-1 bg-neutral-100 rounded-xl shadow p-6">
                         <h2 className="text-primary text-2xl font-semibold mb-2">Our Mission</h2>
                         <p>
-                            To deliver innovative, reliable, and sustainable engineering solutions that exceed client expectations and contribute positively to society.
+                            At Enermill Power Limited, our mission is to develop, construct, and operate world-class power systems that meet the diverse energy needs of our clients.
                         </p>
                     </div>
                     <div className="flex-1 bg-neutral-100 rounded-xl shadow p-6">
                         <h2 className="text-primary text-2xl font-semibold mb-2">Our Vision</h2>
                         <p>
-                            To be the leading provider of engineering and facility management services, recognized for excellence, integrity, and commitment to quality.
+                            To be a leading force in Africa’s energy transformation — delivering innovative, sustainable, and reliable power solutions that drive industrial growth, empower communities, and shape a brighter, energy-secure future.
                         </p>
                     </div>
                 </div>

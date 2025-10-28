@@ -7,15 +7,15 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
                 {/* Logo and description */}
                 <div className="flex-1 flex flex-col items-center md:items-start">
-                <img src="/bodand-logo.png" alt="Bodant Logo" className="h-[50px] w-[100px] mb-4" />
+                <img src="/logo.jpeg" alt="Bodant Logo" className="h-[50px] w-[100px] mb-4" />
                 <p className="text-gray-300 mb-4 max-w-xs text-center md:text-left">
-                    Bodant Innovation Resource Limited – Engineering excellence, innovative solutions, and reliable facility management.
+                    Enermill Power Limited – Powering progress through innovation, expertise, and reliability.
                 </p>
                 <div className="flex gap-4 mt-2">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                         <i className="fa fa-facebook text-3xl text-primary"></i>
                     </a>
-                    <a href="https://wa.me/2348067691079" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <a href="https://wa.me/2348169537714" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i className="fa fa-whatsapp text-3xl text-primary"></i>
                     </a>
                 </div>
@@ -65,7 +65,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-center text-gray-400 mt-12 text-sm">
-                &copy; {new Date().getFullYear()} Bodant Innovation Resource Limited. All rights reserved.
+                &copy; {new Date().getFullYear()} Enermill Power Limited. All rights reserved.
             </div>
         </footer>
         </>

@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Contact from "./ContactForm";
+import { useRouter } from "next/router";
 
 const Header = () => {
+
+    const router = useRouter();
+    const currentPath = router.pathname;
 
     const [hamOpen, setHamOpen] = useState(false);
     const [openNav, setOpenNav] = useState(false);
@@ -42,11 +46,11 @@ const Header = () => {
 
     return ( 
         <>
-        <header id="header" className="relative h-[100px] sm:h-[160px] w-screen px-[10px] sm:px-[40px]">
+        <header id="header" className="relative h-[100px] sm:h-[160px] border-b border-grey w-screen px-[10px] sm:px-[40px] z-10">
             <div className="w-full h-full">
                 <div className="w-full h-full flex items-center justify-between">
                     <div className="h-[75px] w-[150px] cursor-pointer">
-                        <img className="w-full h-full" src="/bodand-logo.png" alt="" />
+                        <img className="w-full h-full" src="/logo.jpeg" alt="" />
                     </div>
                     <div className={`sm:flex w-max h-max flex-col 
                         ${openNav ? "p-[20px] flex flex-col fixed top-0 left-0 w-screen h-screen bg-neutralDark items-start z-20" : "hidden items-end"}
@@ -58,13 +62,17 @@ const Header = () => {
                                 ${openNav ? "mb-[20px]" : ""}
                                 `}>
                                 <h2 className="text-primary text-xl">Business Hours:</h2>
-                                <p className="text-accent text-base">Monday - Friday: 7:30AM - 5:30PM</p>
+                                <p className={`text-base
+                                    ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                    `}>Monday - Friday: 7:30AM - 5:30PM</p>
                             </div>
                             <div className={`h-max w-max 
                                 ${openNav ? "ml-0" : "ml-[40px]"}
                                 `}>
                                 <h2 className="text-primary text-xl">Call Us:</h2>
-                                <p className="text-accent text-base">+234 806 769 1079</p>
+                                <p className={`text-base
+                                    ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                    `}>+234 816 9537 714</p>
                             </div>
                         </div>
                         <div className="w-max h-max flex items-center">
@@ -75,27 +83,37 @@ const Header = () => {
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/"} className="text-accent text-base hover:text-primary hover:underline transition-all duration-300">Home</Link>
+                                        <Link href={"/"} className={`text-base hover:text-primary hover:underline transition-all duration-300
+                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                            `}>Home</Link>
                                     </li>
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/about"} className="text-accent text-base hover:text-primary hover:underline transition-all duration-300">About Us</Link>
+                                        <Link href={"/about"} className={`text-base hover:text-primary hover:underline transition-all duration-300
+                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                            `}>About Us</Link>
                                     </li>
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/services"} className="text-accent text-base hover:text-primary hover:underline transition-all duration-300">Services</Link>
+                                        <Link href={"/services"} className={`text-base hover:text-primary hover:underline transition-all duration-300
+                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                            `}>Services</Link>
                                     </li>
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/gallery"} className="text-accent text-base hover:text-primary hover:underline transition-all duration-300">Gallery</Link>
+                                        <Link href={"/gallery"} className={`text-base hover:text-primary hover:underline transition-all duration-300
+                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                            `}>Gallery</Link>
                                     </li>
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/contact"} className="text-accent text-base hover:text-primary hover:underline transition-all duration-300">Contact Us</Link>
+                                        <Link href={"/contact"} className={`text-base hover:text-primary hover:underline transition-all duration-300
+                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
+                                            `}>Contact Us</Link>
                                     </li>
                                 </ul>
                             </nav>
