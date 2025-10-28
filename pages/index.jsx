@@ -66,14 +66,14 @@ export default function Home() {
       <div className="mid-hero">
         <h2 className="text-3xl sm:text-6xl text-neutralLight font-bold">Enermill Power</h2>
         <p className="text-neutralLight text-base text-center sm:text-3xl">Your trusted partner in dependable, high-quality power system development.</p>
-        <button className="bg-primary text-base text-neutralLight py-3 px-12 rounded-full">Contact Us</button>
+        <button onClick={seeForm} className="bg-primary text-base text-neutralLight py-3 px-12 rounded-full">Contact Us</button>
       </div>
     </section>
     <section id="booking" className={formVisible}>
         <div className="w-full flex items-center justify-end" style={{ height: '60px' }}>
             <div onClick={cancelForm} className="relative cursor-pointer z-30" style={{ width: '40px', height: '40px' }}>
-                <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-accent rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
-                <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-accent -rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
+                <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-neutralLight rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
+                <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-neutralLight -rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
             </div>
         </div>
         <div className="w-full flex items-center justify-center z-[999]" style={{ height: 'calc(100vh - 60px)' }}>
