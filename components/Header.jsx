@@ -104,13 +104,6 @@ const Header = () => {
                                     <li onClick={linkClicked} className={`h-max w-max 
                                         ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
                                         `}>
-                                        <Link href={"/gallery"} className={`text-base hover:text-primary hover:underline transition-all duration-300
-                                            ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
-                                            `}>Gallery</Link>
-                                    </li>
-                                    <li onClick={linkClicked} className={`h-max w-max 
-                                        ${openNav ? "ml-0 mb-[20px]" : "ml-[40px]"}
-                                        `}>
                                         <Link href={"/contact"} className={`text-base hover:text-primary hover:underline transition-all duration-300
                                             ${currentPath === '/' ? "text-neutralLight" : "text-accent"}
                                             `}>Contact Us</Link>
