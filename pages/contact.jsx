@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | BODANT INNOVATIVE RESOURCE LTD</title>
+        <title>Contact Us | Enermill Power Limited</title>
       </Head>
       <section className="relative z-10 w-screen min-h-screen flex items-center justify-center py-16 px-4">
         <div className="w-full max-w-5xl bg-transparent rounded-lg flex flex-col md:flex-row overflow-hidden">

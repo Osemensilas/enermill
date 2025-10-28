@@ -5,7 +5,7 @@ const About = () => {
     return (
         <>
             <Head>
-                <title>About Us | BODANT INNOVATIVE RESOURCE LTD</title>
+                <title>About Us | Enermill Power Limited</title>
             </Head>
             <section className="relative w-screen min-h-[60vh] py-20 px-4 sm:px-16 bg-white flex flex-col items-center justify-center z-10">
                 <motion.h1 
