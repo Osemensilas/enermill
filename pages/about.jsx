@@ -42,6 +42,16 @@ const About = () => {
                         </p>
                     </div>
                 </div>
+                <div className="mt-12 w-full max-w-4xl bg-neutral-100 rounded-xl shadow p-6">
+                    <h2 className="text-primary text-2xl font-semibold mb-4">Registration Details</h2>
+                    <ul className="text-neutralDark list-disc list-inside space-y-2">
+                        <li><strong>Legal Name:</strong> Enermill Power Limited</li>
+                        <li><strong>Company Registration #:</strong> RC8476685</li>
+                        <li><strong>Status:</strong> Active</li>
+                        <li><strong>Corporate Office:</strong> Block 15 Flat 4, Millennium Housing Estate, Ijaiye, Ojokoro, Lagos State, Nigeria</li>
+                        <li><strong>Contact:</strong> 08169537714 | enermillpower@gmail.com</li>
+                    </ul>
+                </div>
             </section>
         </>
     );
