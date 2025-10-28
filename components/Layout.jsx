@@ -23,7 +23,7 @@ const Layout = ({children}) => {
             {children}
             <div className="fixed top-[90%] left-[85%] sm:left-[95%] z-30">
                 <a href="https://wa.me/2348169537714" className="h-max w-max" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i className="fa fa-whatsapp text-5xl text-green-500"></i>
+                    <i className="fa fa-whatsapp text-3xl text-green-500"></i>
                 </a>
             </div>
         </main>
