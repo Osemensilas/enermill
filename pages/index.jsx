@@ -43,7 +43,7 @@ export default function Home() {
     return () => clearInterval(mvInterval);
   }, []);
 
-  const [formVisible, setFormVisible] = useState("w-screen h-screen px-2 fixed top-0 left-0 z-[999] hidden after:top-[0] after:left-[0] after:w-screen after:h-screen after:absolute after:content-[''] after:bg-black after:opacity-[0.4]");
+  const [formVisible, setFormVisible] = useState("w-screen h-screen px-2 fixed top-0 left-0 z-100 hidden after:top-[0] after:left-[0] after:w-screen after:h-screen after:absolute after:content-[''] after:bg-black after:opacity-[0.4]");
 
   const seeForm = () => {
       setFormVisible("w-screen h-screen px-2 fixed top-0 left-0 z-20 after:top-[0] after:left-[0] after:w-screen after:h-screen after:absolute after:content-[''] after:bg-black after:opacity-[0.4]");
@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Home Page | BODANT INNOVATIVE RESOURCE LTD</title>
+      <title>Home Page | Enermill Power Limited</title>
     </Head>
     <section id="home-hero" className="home-hero">
       <Header />
@@ -64,13 +64,13 @@ export default function Home() {
         <Image src="/hero.jpg" fill className="object-fill" alt="hero image" />
       </div>
       <div className="mid-hero">
-        <h2 className="text-6xl text-neutralLight font-bold">Enermill Power</h2>
-        <p className="text-neutralLight text-3xl">Your trusted partner in dependable, high-quality power system development.</p>
+        <h2 className="text-3xl sm:text-6xl text-neutralLight font-bold">Enermill Power</h2>
+        <p className="text-neutralLight text-base text-center sm:text-3xl">Your trusted partner in dependable, high-quality power system development.</p>
         <button className="bg-primary text-base text-neutralLight py-3 px-12 rounded-full">Contact Us</button>
       </div>
     </section>
     <section id="booking" className={formVisible}>
-        <div className="w-full flex items-center justify-end z-30" style={{ height: '60px' }}>
+        <div className="w-full flex items-center justify-end" style={{ height: '60px' }}>
             <div onClick={cancelForm} className="relative cursor-pointer z-30" style={{ width: '40px', height: '40px' }}>
                 <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-accent rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
                 <span className="absolute top-1/2 left-1/2 block w-10 h-1 z-30 bg-accent -rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
@@ -80,7 +80,7 @@ export default function Home() {
             <ContactForm />
         </div>
     </section>
-    <section className="w-screen h-max py-[150px] relative z-10 bg-transparent px-[10px] sm:px-[40px]">
+    <section className="w-screen h-max py-[50px] relative z-10 bg-transparent px-[10px] sm:px-[40px]">
       <h2 className="text-center text-accent text-3xl sm:text-5xl mb-4">Why we should be your</h2>
       <h2 className="text-center text-accent text-3xl sm:text-5xl mb-10">Top Choice</h2>
       <p className="text-accent text-center text-xl">At Enermill Power Limited, we bring together innovation, expertise, and integrity to deliver power solutions that stand the test of time. Whether for commercial, industrial, or utility projects, we approach every partnership with the same dedication to quality, safety, and excellence. Our commitment to collaboration, technical mastery, and sustainable practices ensures that every client receives reliable energy solutions tailored to their unique needs.</p>
@@ -88,7 +88,7 @@ export default function Home() {
         <Link className="px-10 py-4 border-[2px] border-primary hover:border-none bg-transparent hover:bg-primary rounded-full text-primary hover:text-offBlack transition-all duration-300 ease-in-out" href={"/about"}>Learn More</Link>
       </div>
     </section>
-    <section className="w-screen h-max py-[120px] bg-white px-[40px] flex flex-col md:flex-row items-center justify-center gap-12 relative z-10">
+    <section className="w-screen h-max py-[50px] bg-white px-[40px] flex flex-col md:flex-row items-center justify-center gap-12 relative z-10">
       {/* Left: About Us Text */}
       <div className="md:w-1/2 w-full">
         <h2 className="text-offBlack text-4xl font-bold mb-20">About Us</h2>

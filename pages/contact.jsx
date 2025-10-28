@@ -63,23 +63,23 @@ export default function Contact() {
       <Head>
         <title>Contact Us | BODANT INNOVATIVE RESOURCE LTD</title>
       </Head>
-      <section className="relative z-10 w-screen min-h-screen flex items-center justify-center bg-accent py-16 px-4">
+      <section className="relative z-10 w-screen min-h-screen flex items-center justify-center py-16 px-4">
         <div className="w-full max-w-5xl bg-transparent rounded-lg flex flex-col md:flex-row overflow-hidden">
           {/* Left: Hotel Details */}
           <div className="w-full md:w-1/2 bg-transparent text-offWhite flex flex-col justify-center p-8">
             <h2 className="text-3xl font-bold mb-4 text-primary">Contact Information</h2>
             <p className="mb-6 text-offBlack">
-              BODANT INNOVATIVE RESOURCE LTD<br />
-              20, Bello Street, Ikosi-Ketu,  <br />
-              Lagos, Nigeria.
+              Enermill Power Limited<br />
+              Block 15 Flat 4, Millennium Housing
+              Estate, Ijaiye, Ojokoro, Lagos State, Nigeria
             </p>
             <div className="mb-4 flex items-center">
               <i className="fa fa-phone mr-2 text-primary"></i>
-              <span className="text-offBlack">+234 (806) 769-1079</span>
+              <span className="text-offBlack">+234 (816) 9537 714</span>
             </div>
             <div className="mb-4 flex items-center">
               <i className="fa fa-envelope mr-2 text-primary"></i>
-              <span className="text-offBlack">channelbukky@gmail.com</span>
+              <span className="text-offBlack">enermillpower@gmail.com</span>
             </div>
             <div className="flex gap-4 mt-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

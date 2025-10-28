@@ -125,9 +125,9 @@ const ContactForm = () => {
     return ( 
         <>
         <div className="w-full sm:w-max h-max z-30 overflow-scroll">
-            <form onSubmit={formSubmitted} id="booking-form" action="/" className="h-max bg-accent rounded px-1 sm:px-3 z-30 w-[95%] sm:w-[600px]">
+            <form onSubmit={formSubmitted} id="booking-form" action="/" className="h-max bg-accent rounded px-1 sm:px-3 z-30 w-[95%] sm:w-[600px] oveflow-hidden">
                 <header className="w-full h-max py-5 mb-2 sm:mb-5 border-b border-grey">
-                    <h2 className="text-2xl sm:text-4xl text-offBlack text-center">Get Quotation</h2>
+                    <h2 className="text-2xl sm:text-4xl text-neutralLight text-center">Get Quotation</h2>
                 </header>
                 {bookingError && (<div className="bg-red-500 rounded text-accent text-base w-full h-10 flex justify-center items-center mb-1">
                     {bookingError}

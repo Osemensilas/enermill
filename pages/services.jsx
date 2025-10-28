@@ -3,34 +3,34 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "MEP Building Services",
+    title: "Power System Development",
     description:
-      "Comprehensive Mechanical, Electrical, and Plumbing solutions for commercial and residential projects, ensuring efficiency and reliability.",
-    icon: "fa-solid fa-building",
+      "We design and develop efficient power generation systems tailored for commercial, industrial, and utility applications, ensuring optimal performance and sustainability.",
+    icon: "fa fa-industry",
   },
   {
-    title: "Medium Voltage Renewable Energy",
+    title: "Power Project Construction",
     description:
-      "Design and installation of medium voltage systems and renewable energy solutions to power your operations sustainably and safely.",
-    icon: "fa-solid fa-bolt",
+      "Our construction team applies advanced engineering, logistics, and safety processes to build high-quality, reliable, and compliant power infrastructure.",
+    icon: "fa fa-building",
   },
   {
-    title: "Extra Low Voltage",
+    title: "Power System Operation and Maintenance",
     description:
-      "Advanced extra low voltage systems for security, communication, and automation, tailored to your specific needs.",
-    icon: "fa-solid fa-shield-halved",
+      "We operate and maintain power systems to guarantee consistent performance, minimize downtime, and extend the lifespan of assets.",
+    icon: "fa fa-wrench",
   },
   {
-    title: "Project Management",
+    title: "Technical Consultancy and Project Management",
     description:
-      "Professional project management services to deliver your projects on time, within budget, and to the highest standards.",
-    icon: "fa-solid fa-diagram-project",
+      "With decades of industry experience, our experts provide end-to-end consultancy, technical analysis, and project management services to ensure successful project delivery.",
+    icon: "fa fa-tasks",
   },
   {
-    title: "Facility Management",
+    title: "Innovation and System Optimization",
     description:
-      "Integrated facility management solutions to ensure your buildings and infrastructure operate efficiently, safely, and sustainably.",
-    icon: "fa-solid fa-gears",
+      "We integrate cutting-edge technologies and cost-effective methodologies to optimize existing systems, improve efficiency, and deliver long-term value for clients.",
+    icon: "fa fa-lightbulb-o",
   },
 ];
 
@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <>
       <Head>
-        <title>Our Services | BODANT INNOVATIVE RESOURCE LTD</title>
+        <title>Our Services | Enermill Power Limited</title>
       </Head>
       <section className="relative z-10 w-screen min-h-[60vh] py-20 px-4 sm:px-16 bg-white flex flex-col items-center justify-center">
         <motion.h1 
