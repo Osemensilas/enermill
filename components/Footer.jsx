@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
                 {/* Logo and description */}
                 <div className="flex-1 flex flex-col items-center md:items-start">
-                <img src="/logo.jpeg" alt="Bodant Logo" className="h-[50px] w-[100px] mb-4" />
+                <img src="/ENERMILL LOGO PNG.png" alt="Bodant Logo" className="h-[50px] w-[100px] mb-4" />
                 <p className="text-gray-300 mb-4 max-w-xs text-center md:text-left">
                     Enermill Power Limited – Powering progress through innovation, expertise, and reliability.
                 </p>
