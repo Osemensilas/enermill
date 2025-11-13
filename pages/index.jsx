@@ -170,7 +170,7 @@ export default function Home() {
         </button>
       </div>
     </section>
-    <section className="w-screen h-max py-[70px] bg-neutralDark px-[40px] flex flex-col items-center justify-center relative z-10">
+    <section className="w-screen h-max py-[70px] bg-white px-[40px] flex flex-col items-center justify-center relative z-10">
       <div className="w-full max-w-xl mx-auto">
         <div className="relative">
           {missionVisionCards.map((card, idx) =>
