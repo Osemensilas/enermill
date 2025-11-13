@@ -52,7 +52,7 @@ const Header = () => {
             <div className="w-full h-full">
                 <div className="w-full h-full flex items-center justify-between">
                     <div className="h-[75px] w-[150px] cursor-pointer">
-                        <img className="w-full h-full" src="/logo.jpeg" alt="" />
+                        <img className="w-full h-full" src="/ENERMILL LOGO PNG.png" alt="" />
                     </div>
                     <div className={`sm:flex w-max h-max flex-col 
                         ${openNav ? "p-[20px] flex flex-col fixed top-0 left-0 w-screen h-screen bg-neutralDark items-start z-20" : "hidden items-end"}
