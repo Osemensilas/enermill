@@ -23,6 +23,10 @@ const Header = () => {
         }
     }
 
+    const logoClicked = () => {
+        router.push("/");
+    }
+
     const linkClicked = () => {
         setHamOpen(false);
         setWitText(false);
@@ -51,7 +55,7 @@ const Header = () => {
         <header id="header" className="relative h-[100px] sm:h-[160px] border-b border-grey w-screen px-[10px] sm:px-[40px] z-50">
             <div className="w-full h-full">
                 <div className="w-full h-full flex items-center justify-between">
-                    <div className="h-[75px] w-[150px] cursor-pointer">
+                    <div onClick={logoClicked} className="h-[100px] w-[200px] cursor-pointer">
                         <img className="w-full h-full" src="/ENERMILL LOGO PNG.png" alt="" />
                     </div>
                     <div className={`sm:flex w-max h-max flex-col 

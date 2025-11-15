@@ -16,7 +16,7 @@ const Layout = ({children}) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta name="description" content="Enermill Power Limited" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-            <link rel="shortcut icon" href="" type="image/x-icon" />
+            <link rel="shortcut icon" href="/ENERMILL LOGO PNG.png" type="image/x-icon" />
         </Head>
         {!isHomePage && <Header />}
         <main className="">

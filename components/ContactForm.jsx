@@ -82,7 +82,14 @@ const ContactForm = () => {
 
                 if (response.data.status === 'successful'){
                     setContactSuccess('Successful');
-                    counterStart();
+                    setFormData({
+                        'fullname': '',
+                        'email': '',
+                        'phone': '',
+                        'location': '',
+                        'message': '',
+                    });
+                    counterStart()
                 }
             }catch(error){
                 console.log("Error submitting form: ", error);
