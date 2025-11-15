@@ -7,7 +7,7 @@ export default function Contact() {
   const [contactError, setContactError] = useState('');
   const [contactSuccess, setContactSuccess] = useState('');
   const [formData, setFormData] = useState({
-      'name': '',
+      'fullname': '',
       'email' : '',
       'message' : '',
   })
@@ -61,7 +61,7 @@ export default function Contact() {
               setContactSuccess('Successful');
               counterStart();
               setFormData({
-                  'name': '',
+                  'fullname': '',
                   'email' : '',
                   'message' : '',
               })
@@ -134,7 +134,7 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Your Name"
-                name="name"
+                name="fullname"
                 value={formData.name}
                 onChange={handleChanged}
                 className="px-4 py-3 rounded border border-grey text-black"
