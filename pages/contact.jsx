@@ -24,8 +24,8 @@ export default function Contact() {
     let emailVal = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     let errorValue = false;
-    if (!nameVal.test(formData.name)){
-        setContactError('Please enter a valid name');
+    if (formData.name === ""){
+        setContactError('Please your name');
         errorValue = true;
     }else{
         setContactError('');
