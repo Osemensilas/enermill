@@ -82,7 +82,7 @@ const ContactForm = () => {
                 }
             }catch(error){
                 console.log("Error submitting form: ", error);
-                setBookingError('An error occurred while submitting your booking. Please try again later.');
+                setBookingError('An error occurred while sending your message. Please try again later.');
             }
         }
     }
