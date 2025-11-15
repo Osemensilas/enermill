@@ -49,6 +49,13 @@ const ContactForm = () => {
                         errorValue = true;
                     }else{
                         setBookingError('');
+
+                        if (!formData.message){
+                            setBookingError('Message required');
+                            errorValue = true;
+                        }else{
+                            setBookingError('');
+                        }
                     }
                 }
             }
@@ -56,7 +63,7 @@ const ContactForm = () => {
 
         if (!errorValue){
             try{
-                let url = "https://backend.palmhavenhotel.com/booking.php";
+                let url = "https://backend.enermillpower.com/message.php";
 
                 const response = await axios.post(url, formData,{
                     headers: {
@@ -64,56 +71,14 @@ const ContactForm = () => {
                     },withCredentials: true,
                 })
                 
-                const {error, msg} = response.data;
+                console.log(response.data);
 
-                if (msg === 'unsuccessful'){
-                    if (error.fullname === 'Name is required'){
-                        setBookingError('Name is required');
-                    }else{
-                        setBookingError('');
-
-                        if (error.fullname === 'Invalid name'){
-                            setBookingError('Invalid name');
-                        }else{
-                            setBookingError('');
-
-                            if (error.email === 'Email address is required'){
-                                setBookingError('Email address is required');
-                            }else{
-                                setBookingError('');
-
-                                if (error.email === 'Invalid email address'){
-                                    setBookingError('Invalid email address');
-                                }else{
-                                    setBookingError('');
-
-                                    if (error.phone === 'Phone number is required'){
-                                        setBookingError('Phone number is required');
-                                    }else{
-                                        setBookingError('');
-
-                                        if(error.phone === "Begin phone number with country's code"){
-                                            setBookingError("Begin phone number with country's code");
-                                        }else{
-                                            setBookingError('');
-
-                                            if (error.location === 'suite/cottage should not be empty'){
-                                                setBookingError('suite/cottage should not be empty');
-                                            }else{
-                                                setBookingError('');
-
-                                                
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                if (response.data.status === 'error'){
+                    
                 }
 
-                if (msg === 'success'){
-                    setContactSuccess('Booking successful');
+                if (response.data.status === 'success'){
+                    setContactSuccess('Successful');
                 }
             }catch(error){
                 console.log("Error submitting form: ", error);
@@ -152,52 +117,52 @@ const ContactForm = () => {
                     </div>
                     <div className="w-full h-max mb-3">
                         <div className="h-max flex flex-col items-start justify-start" style={{width: '98%'}}>
-                            <label htmlFor="adult" className="text-grey mb-1 hidden sm:block">Phone:</label>
+                            <label htmlFor="phone" className="text-grey mb-1 hidden sm:block">Phone:</label>
                             <input type="text" name="phone" value={formData.phone} onChange={handleChanged} id="phone" placeholder="Phone Number" className="w-full border border-grey rounded outline-none px-3" style={{height: '40px'}}/> 
                         </div>
                     </div>
                     <div className="w-full h-max mb-3">
                         <div className="h-max flex flex-col items-end justify-end" style={{width: '98%'}}>
-                            <label htmlFor="suite" className="text-grey mb-1 hidden sm:block">Location:</label>
-                            <select type="text" name="suite" value={formData.location} onChange={handleChanged} id="suite" className="w-full border border-grey rounded outline-none px-3" style={{height: '40px'}}>
+                            <label htmlFor="location" className="text-grey mb-1 hidden sm:block">Location:</label>
+                            <select name="location" value={formData.location} id="location" onChange={handleChanged} className="w-full border border-grey rounded outline-none px-3" style={{height: '40px'}}>
                                 <option value="">-- Select Location --</option>
-                                <option value="abia">Abia</option>
-                                <option value="adamawa">Adamawa</option>
-                                <option value="akwa_ibom">Akwa Ibom</option>
-                                <option value="anambra">Anambra</option>
-                                <option value="bauchi">Bauchi</option>
-                                <option value="bayelsa">Bayelsa</option>
-                                <option value="benue">Benue</option>
-                                <option value="borno">Borno</option>
-                                <option value="cross_river">Cross River</option>
-                                <option value="delta">Delta</option>
-                                <option value="ebonyi">Ebonyi</option>
-                                <option value="edo">Edo</option>
-                                <option value="ekiti">Ekiti</option>
-                                <option value="enugu">Enugu</option>
-                                <option value="gombe">Gombe</option>
-                                <option value="imo">Imo</option>
-                                <option value="jigawa">Jigawa</option>
-                                <option value="kaduna">Kaduna</option>
-                                <option value="kano">Kano</option>
-                                <option value="katsina">Katsina</option>
-                                <option value="kebbi">Kebbi</option>
-                                <option value="kogi">Kogi</option>
-                                <option value="kwara">Kwara</option>
-                                <option value="lagos">Lagos</option>
-                                <option value="nasarawa">Nasarawa</option>
-                                <option value="niger">Niger</option>
-                                <option value="ogun">Ogun</option>
-                                <option value="ondo">Ondo</option>
-                                <option value="osun">Osun</option>
-                                <option value="oyo">Oyo</option>
-                                <option value="plateau">Plateau</option>
-                                <option value="rivers">Rivers</option>
-                                <option value="sokoto">Sokoto</option>
-                                <option value="taraba">Taraba</option>
-                                <option value="yobe">Yobe</option>
-                                <option value="zamfara">Zamfara</option>
-                                <option value="fct">FCT (Abuja)</option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa_ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                                <option value="FCT Abuja">FCT (Abuja)</option>
                             </select>
                         </div>
                     </div>
