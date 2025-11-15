@@ -51,10 +51,10 @@ export default function Contact() {
             console.log(response.data);
             
             if (response.data.status === 'error'){
-                setBookingError(response.data.message);
+                setContactError(response.data.message);
                 errorValue = true;
             }else{
-                setBookingError('');
+                setContactError('');
             }
 
             if (response.data.status === 'successful'){
