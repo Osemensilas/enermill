@@ -80,14 +80,21 @@ const ContactForm = () => {
                     setBookingError('');
                 }
 
-                if (response.data.status === 'success'){
+                if (response.data.status === 'successful'){
                     setContactSuccess('Successful');
+                    counterStart();
                 }
             }catch(error){
                 console.log("Error submitting form: ", error);
                 setBookingError('An error occurred while sending your message. Please try again later.');
             }
         }
+    }
+
+    function counterStart(){
+        setTimeout(() => {
+            setContactSuccess('');
+        }, 5000);
     }
 
     return ( 
