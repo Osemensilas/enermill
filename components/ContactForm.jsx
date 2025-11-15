@@ -74,7 +74,10 @@ const ContactForm = () => {
                 console.log(response.data);
 
                 if (response.data.status === 'error'){
-                    
+                    setBookingError(response.data.message);
+                    errorValue = true;
+                }else{
+                    setBookingError('');
                 }
 
                 if (response.data.status === 'success'){
