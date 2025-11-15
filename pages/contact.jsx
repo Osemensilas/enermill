@@ -40,7 +40,7 @@ export default function Contact() {
 
     if (!errorValue){
         try{
-            let url = "https://backend.palmhavenhotel.com/message.php";
+            let url = "https://backend.enermillpower.com/message.php";
 
             const response = await axios.post(url, formData, {
                 headers: {
@@ -58,8 +58,13 @@ export default function Contact() {
             }
 
             if (response.data.status === 'successful'){
-                setContactSuccess('Successful');
-                counterStart();
+              setContactSuccess('Successful');
+              counterStart();
+              setFormData({
+                  'name': '',
+                  'email' : '',
+                  'message' : '',
+              })
             }
         }catch(error){
             console.log("Error submitting form:", error);
