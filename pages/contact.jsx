@@ -135,7 +135,7 @@ export default function Contact() {
                 type="text"
                 placeholder="Your Name"
                 name="fullname"
-                value={formData.name}
+                value={formData.fullname}
                 onChange={handleChanged}
                 className="px-4 py-3 rounded border border-grey text-black"
               />
