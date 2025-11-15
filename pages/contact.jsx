@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import axios from "axios";
 
@@ -19,45 +18,61 @@ export default function Contact() {
   }
 
   const formSubmitted = async (e) => {
-      e.preventDefault();
+    e.preventDefault();
 
-      let nameVal = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
-      let emailVal = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let nameVal = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
+    let emailVal = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-      let errorValue = false;
-      if (!nameVal.test(formData.name)){
-          setContactError('Please enter a valid name');
-          errorValue = true;
-      }else{
-          setContactError('');
+    let errorValue = false;
+    if (!nameVal.test(formData.name)){
+        setContactError('Please enter a valid name');
+        errorValue = true;
+    }else{
+        setContactError('');
 
-          if (!emailVal.test(formData.email)){
-              setContactError('Please enter a valid email');
-              errorValue = true;
-          }else{
-              setContactError('');
-          }
-      }
+        if (!emailVal.test(formData.email)){
+            setContactError('Please enter a valid email');
+            errorValue = true;
+        }else{
+            setContactError('');
+        }
+    }
 
-      if (!errorValue){
-          try{
-              let url = "https://backend.palmhavenhotel.com/message.php";
+    if (!errorValue){
+        try{
+            let url = "https://backend.palmhavenhotel.com/message.php";
 
-              const response = await axios.post(url, formData, {
-                  headers: {
-                      'Content-Type' : 'application/json'
-                  },withCredentials: true,
-              });
-              const {status, message} = response.data;
+            const response = await axios.post(url, formData, {
+                headers: {
+                    'Content-Type' : 'application/json'
+                },withCredentials: true,
+            });
 
-              if (status === 'success'){
-                setContactSuccess(message);
-              }
-          }catch(error){
-              console.log("Error submitting form:", error);
-          }
-      }
+            console.log(response.data);
+            
+            if (response.data.status === 'error'){
+                setBookingError(response.data.message);
+                errorValue = true;
+            }else{
+                setBookingError('');
+            }
+
+            if (response.data.status === 'successful'){
+                setContactSuccess('Successful');
+                counterStart();
+            }
+        }catch(error){
+            console.log("Error submitting form:", error);
+        }
+    }
   }
+
+  function counterStart(){
+      setTimeout(() => {
+          setContactSuccess('');
+      }, 5000);
+  }
+
   return (
     <>
       <Head>
